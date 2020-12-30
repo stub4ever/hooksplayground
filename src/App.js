@@ -1,17 +1,16 @@
 import './App.css';
+import { useState } from 'react';
 
-// Stateless Functional Component
-const Box = (props) => {
-  return ( 
-    <div className="box">
-      <h1>{props.text}</h1>
-    </div>
-
-  );
-}
 const App = () => {
+
+  // This is a function that's going to generate a piece of state for us and for now for us to keep things
+  // as simple as possible you could think of it as a single property under this that state opt right.
+  console.log(useState(false))
+
+  
   return (
-    <Box text="This is an box"/>
+    <>
+    </>
   );
 }
 
