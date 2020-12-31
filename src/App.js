@@ -1,23 +1,17 @@
-import './App.css';
-import { useState } from 'react';
+import React, { useState } from 'react';
 
-const App = () => {
-
-  // Use array ES6 destruction to assign each of the elements in the returned array to a seperate constant
-  const [activated, setActivated] = useState(false)
-  const buttonText = activated ? 'active' : 'inactive'
-
-  // Apply arrow function to declare
-  const onClick = () =>  setActivated(!activated) // invoke these setActivated function going to update to inverse boolean
-
+function App() {
+  const [count, setCount]= useState(0)
+  // const handleClick = () => setCount(count + 1);
+  const handleClick = () => setCount((prevCount) => {
+    return prevCount + 1;
+  });
   return (
-    <>
-      {/* <button onClick={() => setActivated(!activated)}>  */}
-      <button onClick={onClick}>
-        {buttonText}
-      </button>
-    </>
-  );
+    <div>
+      <button onClick={handleClick}>Increase</button>
+      <h1>{count}</h1>
+    </div>
+  )
 }
 
 export default App;
