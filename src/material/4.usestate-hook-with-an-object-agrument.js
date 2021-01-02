@@ -13,7 +13,7 @@ function App() {
       // This function will override the whole current state => it will exclude country to undefined
       // city: event.target.value // set whenever typed value to city obj
 
-      // Take the old values of our object to expand it to get all those key value parents to get all those property value parents and then simply overwrite the one that we want to overwrite with the new values.
+      // Take the old values of our object to expand to get all those property value parents, and then simply overwrite the one that we want to overwrite with the new values.
       ...state, city: event.target.value // It takes our original state obj, it's gonna take the current properties, going to expand them, and then take city and overwrite, it kept other unchanged properties
     })
   }
