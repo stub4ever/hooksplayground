@@ -16,3 +16,4 @@ from destruction that is available for use anywhere.
 // initial useState return a Array of 2 elements
 // => Array[0] = return the current value of the state (A getter)
 // => Array[1] = return state function to update the current value (A setter) + state fuction cannot be invoke + state function declares to store states its a variable that going to remember data
+// New approach is to variable state to invoke useState hook multiple times to update one property of that state instead using old way state obect with more properties

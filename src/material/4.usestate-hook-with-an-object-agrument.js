@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 
 function App() {
+  // New approach is to variable state to invoke useState hook multiple times to update one property of that state instead using old way state obect with more properties
+
   // add two or more pieces of state on our component as additional properties on our object
   const [state, setState] = useState({ // state is our object of two key value pairs
     city: '',
