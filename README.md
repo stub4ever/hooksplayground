@@ -35,3 +35,6 @@ Now the react documentation actually advises us not to think so much about old r
 Instead they say quote you might find it easier to think that affects simply happen after rendered.
 So if the component is changing if something in our visual interface has been altered you can expect
 the function that we pass to the use effect hook to run again. It's that symbol.
+
+// The useEffect return runs after the next time that use effect runs => to clear the setup from the previous time it ran 
+// and then set it up again by rerunning a line.
