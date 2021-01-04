@@ -17,7 +17,7 @@ function Counter() {
         `I'm removing anything that is set above. the last count was ${count}`
       );
     };
-  });
+  }, []); // add a array as our second agrument
 
   return (
     <div>

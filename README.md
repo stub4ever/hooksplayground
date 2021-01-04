@@ -42,6 +42,9 @@ the function that we pass to the use effect hook to run again. It's that symbol.
 
 The question is when exactly does react cleanup and affect.
 The answer is react performs the cleanup when the component on mounts.
-useEffects run for every render and not just once.
-It cleans up effects from the previous render it takes that cued up return function
+useEffects run for every render and not just once. It cleans up effects from the previous render it takes that cued up return function
 This is why react also cleans up the effects from the previous render before running the effects next time.
+
+// How we can limit the use effect hook to run only when a component mounts or on Mounts.
+// And prevent re renders from triggering a use effect hook from running.
+// All we have to do is pass an empty array as the second argument to the use.
