@@ -1,5 +1,6 @@
 import React, { createContext, useState, useContext } from "react";
 
+// https://reactjs.org/docs/context.html#contextconsumer
 const NameContext = createContext();
 
 function App() {

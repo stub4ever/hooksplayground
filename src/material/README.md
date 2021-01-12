@@ -48,3 +48,30 @@ This is why react also cleans up the effects from the previous render before run
 // How we can limit the use effect hook to run only when a component mounts or on Mounts.
 // And prevent re renders from triggering a use effect hook from running.
 // All we have to do is pass an empty array as the second argument to the use.
+
+`useEffect(() => { console.log( `I'm inside the useEffect function! The current count is ${count}`
+);
+return () => {
+console.log("I'm removing anything that was set up above!");
+};
+// This only runs the side effect if the count state changes
+// }, [count]);
+
+// This only runs the side effect if the color state changes
+// }, [color]);
+
+// This brings us back to the original shape where ALL state was kept track of
+// }, [count, color]);
+
+// This provides NO pieces of state to monitor. React will not update on ANY state change
+// }, []);
+});
+`
+
+### useContext
+
+Every Context object comes with a Provider React component that allows consuming components to subscribe to context changes.
+
+The Provider component accepts a value prop to be passed to consuming components that are descendants of this Provider. One Provider can be connected to many consumers. Providers can be nested to override values deeper within the tree.
+
+https://reactjs.org/docs/context.html#contextconsumer
