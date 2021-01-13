@@ -4,6 +4,8 @@ The official react documentation describes hooks as a way to quote use react fea
 a class a hook is a function of plain function that hooks into or connects to or enables access to a
 special react feature.
 
+https://reactjs.org/docs/hooks-intro.html
+
 ### State
 
 useState is a hook that allows us to use the react feature of state without actually making a class
@@ -17,6 +19,10 @@ from destruction that is available for use anywhere.
 // => Array[0] = return the current value of the state (A getter)
 // => Array[1] = return state function to update the current value (A setter) + state fuction cannot be invoke + state function declares to store states its a variable that going to remember data
 // New approach is to variable state to invoke useState hook multiple times to update one property of that state instead using old way state obect with more properties
+
+https://reactjs.org/docs/hooks-intro.html
+https://reactjs.org/docs/hooks-state.html#tip-what-do-square-brackets-mean
+https://reactjs.org/docs/hooks-faq.html#should-i-use-one-or-many-state-variables
 
 ### useEffect
 
@@ -68,6 +74,8 @@ console.log("I'm removing anything that was set up above!");
 });
 `
 
+https://reactjs.org/docs/hooks-effect.html#example-using-hooks-1
+
 ### useContext
 
 Every Context object comes with a Provider React component that allows consuming components to subscribe to context changes.
@@ -75,3 +83,10 @@ Every Context object comes with a Provider React component that allows consuming
 The Provider component accepts a value prop to be passed to consuming components that are descendants of this Provider. One Provider can be connected to many consumers. Providers can be nested to override values deeper within the tree.
 
 https://reactjs.org/docs/context.html#contextconsumer
+https://daveceddia.com/usecontext-hook/
+
+### Custom Hooks
+
+Custom hook is just a plain javascript function that uses some hooks functionality. A custom hook is not a react component it doesn't return any JSX. It doesn't render anything to our Dom it's not anything visual but it does retain part of that react logic, because it does use our used state hook and extracted this business logic to its own separate function which we can of course keep us on separate file what we can do is allow multiple components to reuse use keep us all we have to do is simply invoke that custom hook and have access to all of its functionality including state including use effect including use context etc..
+
+https://reactjs.org/docs/hooks-custom.html#extracting-a-custom-hook
